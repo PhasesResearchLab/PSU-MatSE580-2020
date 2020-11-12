@@ -1,0 +1,18 @@
+system:
+  phase_models: phases.json
+  datasets: input-data
+output:
+  output_db:  mcmc.tdb
+  verbosity:  2
+  tracefile:  trace.npy
+  probfile:   lnprob.npy
+  logfile:    null
+mcmc:
+  iterations: 10
+  scheduler: null
+  input_db: cu-mg_dft.tdb
+  chains_per_parameter: 2
+  data_weights:
+    ZPF: 20.0
+    SM: 0.1
+  approximate_equilibrium: True
